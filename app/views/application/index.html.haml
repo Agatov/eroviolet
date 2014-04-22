@@ -1,0 +1,50 @@
+.padder
+#intro
+  .wrapper
+    .intro-title
+      Массажный салон
+      %span.blue Виолет
+      %br
+      приглашает девушек
+      %br
+      на
+      %span.blue
+        эротический массаж
+
+
+
+= render partial: 'application/triggers'
+
+
+%section#girls
+  .wrapper
+    .title
+      Наши девушки
+
+
+
+
+    .girls
+      - @girls.each do |girl|
+        = render partial: 'girls/girl', locals: {girl: girl}
+
+
+= render partial: 'application/programms'
+= render partial: 'application/faq'
+
+
+#address
+  Волков переулок, дом 13, с1
+#map
+
+.request-call-dialog
+  .header-transparent
+  .arrow-up
+  .content
+    .success
+      Мы вам скоро перезвоним!
+    %form
+      %input{type: :text, name: :username, placeholder: 'Ваше имя'}
+      %input{type: :text, name: :phone, placeholder: 'Ваш телефон'}
+      .submit#submit-order
+        Заказать звонок

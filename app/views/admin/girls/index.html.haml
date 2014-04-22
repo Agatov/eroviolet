@@ -1,0 +1,40 @@
+%legend
+  Список
+  %a.btn{href: new_admin_girl_path, style: 'float: right;'}
+    Добавить
+
+%table.table.table-striped
+  %thead
+    %tr
+      %th
+        Имя
+      %th
+        Возраст
+      %th
+        Рост
+      %th
+        Вес
+      %th
+        Бюст
+      %th
+        = '...'
+  %tbody
+    - @girls.each do |girl|
+      %tr
+        %td
+          = girl.name
+        %td
+          = girl.age.to_s
+        %td
+          = girl.height.to_s
+          см
+        %td
+          = girl.weight.to_s
+          кг
+        %td
+          = girl.bubs.to_s
+          размер
+        %td
+          = link_to 'изменить', edit_admin_girl_path(girl)
+          %br
+          = link_to 'удалить', admin_girl_path(girl), method: :delete, confirm: 'Удалить!?'

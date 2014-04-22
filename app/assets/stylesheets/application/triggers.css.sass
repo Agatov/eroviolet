@@ -1,0 +1,65 @@
+.triggers
+  @include thumbnails_parent
+  padding-top: 30px
+
+
+
+  .trigger-container
+    float: left
+    margin-right: 20px
+    margin-bottom: 20px
+    width: 420px
+    height: 200px
+    padding: 15px
+    background: #f2f7fa
+    &:nth-child(2n)
+      margin-right: 0px
+
+
+
+
+    .trigger-header
+      @include thumbnails_parent
+
+
+      .trigger-title
+        float: left
+        padding-top: 20px
+        margin-left: 20px
+        width: 280px
+        font-size: 24px
+        font-family: 'Roboto-Light'
+        line-height: 1.4
+
+      .trigger-icon
+        float: left
+        width: 100px
+        height: 100px
+        position: relative
+
+        .icon
+          width: 100px
+          height: 100px
+          position: absolute
+
+          &.shower
+            background: url('/assets/icons/shower.png') no-repeat
+            background-size: 100%
+
+          &.thief
+            background: url('/assets/icons/thief.png') no-repeat
+            background-size: 100%
+
+          &.wiskey
+            background: url('/assets/icons/wiskey.png') no-repeat
+            background-size: 100%
+
+          &.baby
+            background: url('/assets/icons/baby.png') no-repeat
+            background-size: 100%
+
+    .trigger-desc
+      padding-top: 20px
+      font-size: 14px
+      line-height: 1.4
+      font-family: 'Roboto-Light'
