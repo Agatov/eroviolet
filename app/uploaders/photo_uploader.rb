@@ -18,24 +18,17 @@ class PhotoUploader < CarrierWave::Uploader::Base
     process :resize_to_fit => [500, 500]
   end
 
+
+  version :long_preview do
+    process:resize_to_fill => [180, 120, ::Magick::NorthGravity]
+  end
+
   version :preview do
     process :resize_to_fill => [115, 115]
   end
 
   version :large do
     process :resize_to_fill => [128, 128]
-  end
-
-  version :thumb do
-    process :resize_to_fill => [64, 64]
-  end
-
-  version :small do
-    process :resize_to_fill => [48, 48]
-  end
-
-  version :mini do
-    process :resize_to_fill => [32, 32]
   end
 
   def extension_white_list

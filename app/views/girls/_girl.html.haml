@@ -1,7 +1,7 @@
 .girl
   .avatar
-    -#%a{href: girl_path(girl)}
-    = image_tag girl.avatar_url(:preview)
+    %a{href: girl_path(girl)}
+      = image_tag girl.avatar_url(:preview)
   .info
     .name
       = girl.name

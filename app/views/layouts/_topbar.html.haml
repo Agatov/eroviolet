@@ -11,20 +11,25 @@
     %ul.navigation
 
       %li
-        %a.nav-link{href: '#', rel_id: 'girls'}
-          Девушки
+        - if params[:controller] == 'application'
+          %a.nav-link{href: '#', rel_id: 'girls'}
+            Девушки
+        - else
+          = link_to 'Девушки', root_path(anchor: :girls)
 
       %li
-        %a.nav-link{href: '#', rel_id: 'programs'}
-          Программы
+        - if params[:controller] == 'application'
+          %a.nav-link{href: '#', rel_id: 'programs'}
+            Программы
+        - else
+          = link_to 'Программы', root_path(anchor: :programs)
 
       %li
-        %a.nav-link{href: '#', rel_id: 'faq'}
-          FAQ
-
-      %li
-        %a.nav-link{href: '#', rel_id: 'map'}
-          Контакты
+        - if params[:controller] == 'application'
+          %a.nav-link{href: '#', rel_id: 'map'}
+            Контакты
+        - else
+          = link_to 'Контакты', root_path(anchor: :map)
 
       %li
         %a.get-call{href: '#'}

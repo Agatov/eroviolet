@@ -1,0 +1,110 @@
+#intro-short
+.wrapper
+  .girl-name
+    = link_to 'Главная страница', root_path
+    = '/'
+    Массажистка
+    = @girl.name
+
+
+  .girl-container
+    .girl-avatar
+      = image_tag @girl.avatar_url(:profile)
+
+
+    .previews
+      - @girl.photos.each do |photo|
+        .preview
+          %a{href: photo.image_url, 'data-lightbox' => 'girl'}
+            = image_tag photo.image_url(:long_preview)
+    .girl-params
+      .parameter
+        .label
+          Возраст:
+        .value
+          = @girl.age.to_s
+          лет
+
+      .parameter
+        .label
+          Грудь:
+        .value
+          = @girl.bubs.to_s
+          размер
+
+
+      .parameter
+        .label
+          Рост:
+        .value
+          = @girl.height.to_s
+          см
+      .parameter
+        .label
+          Вес:
+        .value
+          = @girl.weight.to_s
+          кг
+
+
+  .girl-video-container
+    .girl-video
+      %iframe{src: '//www.youtube.com/embed/Dk33QOsf4vo',
+        width: 960,
+        height: 540, frameborder: 0}
+
+  .triggers-title
+    Почему стоит прийти к нам на массаж
+  .girl-triggers
+    .girl-trigger
+      .trigger-name
+        Не воруем ваше время
+
+      .trigger-icon
+        = image_tag 'icons/thief.png'
+
+      .trigger-desc
+        Время программы начинает засекаться с моменты выхода гостя из душа
+    .girl-trigger.middle
+      .trigger-name
+        Массажистки с дипломами
+        .trigger-icon
+          = image_tag 'icons/diplom.png'
+        .trigger-desc
+          Все наши массажистки имеют дипломы о прохождении специальных курсов
+          классического и эротического массажа
+    .girl-trigger
+      .trigger-name
+        Бесплатные дополнения
+      .trigger-icon
+        = image_tag 'icons/showerdop.png'
+      .trigger-desc
+        Дополнения "Душ с девушкой" и "Взаимные ласки"
+        включены в стоимость любой программы
+
+
+  .girl-form
+
+
+    .form-thank-you
+      .thank-you-text
+        .bolder.big Спасибо!
+        Менеджер свяжется с вами в течение 15 минут
+
+
+
+    .form-block
+      .form-title
+        Забронировать массаж с Аленой онлайн
+
+      .subtitle
+        Просто оставь свои контакты и мы вам перезвоним!
+        %br
+        Или позвоните по номеру (495) 961 74 15
+
+      %form
+        %input{type: :text, name: :username, placeholder: 'Ваше имя'}
+        %input{type: :text, name: :phone, placeholder: 'Ваш телефон'}
+        .button.send-form Отправить
+
+
