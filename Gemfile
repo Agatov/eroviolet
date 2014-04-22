@@ -18,7 +18,7 @@ group :development do
 end
 
 gem 'sqlite3'
-gem 'mysql2',  :git => 'http://github.com/brianmario/mysql2.git'
+gem 'mysql2', github: 'brianmario/mysql2'
 gem 'haml-rails'
 gem 'rabl'
 gem 'js-routes'
