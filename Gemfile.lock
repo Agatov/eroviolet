@@ -1,3 +1,9 @@
+GIT
+  remote: http://github.com/brianmario/mysql2.git
+  revision: d0a51992b33761cc4d557274f57cf293292d3f5a
+  specs:
+    mysql2 (0.3.15)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -181,6 +187,7 @@ DEPENDENCIES
   kaminari
   kgio (= 2.7.4)
   meta-tags
+  mysql2!
   rabl
   rails (= 3.2.13)
   raindrops (= 0.10.0)
