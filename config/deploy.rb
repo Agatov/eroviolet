@@ -11,7 +11,7 @@ set :application, 'eroviolet'
 
 default_run_options[:pty] = true
 set :normalize_asset_timestamps, false
-set :repository, "git@github.com:Agatov/eromassage.git"  # Your clone URL
+set :repository, "git@github.com:Agatov/eroviolet.git"  # Your clone URL
 set :scm, :git
 set :deploy_via, :remote_cache
 set :bundle_gemfile,  'Gemfile'
