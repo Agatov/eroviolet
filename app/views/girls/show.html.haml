@@ -46,12 +46,12 @@
           = @girl.weight.to_s
           кг
 
-
-  .girl-video-container
-    .girl-video
-      %iframe{src: '//www.youtube.com/embed/Dk33QOsf4vo',
-        width: 960,
-        height: 540, frameborder: 0}
+  - if @girl.video?
+    .girl-video-container
+      .girl-video
+        %iframe{src: '//www.youtube.com/embed/Dk33QOsf4vo',
+          width: 960,
+          height: 540, frameborder: 0}
 
   .triggers-title
     Почему стоит прийти к нам на массаж
@@ -95,7 +95,9 @@
 
     .form-block
       .form-title
-        Забронировать массаж с Аленой онлайн
+        Забронировать массаж с
+        = @girl.name_for_form
+        онлайн
 
       .subtitle
         Просто оставь свои контакты и мы вам перезвоним!
