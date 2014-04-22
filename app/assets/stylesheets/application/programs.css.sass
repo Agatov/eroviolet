@@ -1,3 +1,39 @@
+.programs-filter
+  width: 550px
+  height: 50px
+  margin: 40px auto
+
+  li
+    display: inline
+    width: 130px
+    padding: 3px 10px
+
+    height: 50px
+    line-height: 50px
+    margin-right: 50px
+    text-align: center
+
+
+
+    &.active
+      background: #02D1EB
+      color: #fff
+      border-radius: 8px
+
+      a
+        color: #fff
+        border-bottom: none
+
+    &.last
+      margin-right: 0px
+
+
+    a
+      color: #02D1EB
+      text-decoration: none
+      border-bottom: 1px dashed #02D1EB
+
+
 .programs
   @include thumbnails_parent
   padding-top: 30px

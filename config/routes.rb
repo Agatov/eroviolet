@@ -14,5 +14,7 @@ Eromassage::Application.routes.draw do
     resources :rooms do
       resources :photos, only: [:create, :destroy]
     end
+
+    resources :programs
   end
 end

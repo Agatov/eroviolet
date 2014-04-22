@@ -1,0 +1,12 @@
+= simple_form_for program, url: url, html: {class: ['form-horizontal', 'span8']} do |f|
+  = f.input :name, input_html: {class: 'span6'}
+  - if program.avatar?
+    .avatar{style: 'padding: 10px; margin: 10px; margin-left: 170px'}
+      = image_tag program.avatar_url
+  = f.input :avatar, input_html: {class: 'span6'}
+  = f.input :about, input_html: {class: 'span6', rows: 4}
+  = f.input :info, input_html: {class: 'span6', rows: 4}
+  = f.input :price, input_html: {class: 'span6', rows: 4}
+  = f.input :duration, input_html: {class: 'span6', rows: 4}
+  .form-actions.span6
+    = f.submit 'Сохранить', class: ['btn', 'btn-primary']

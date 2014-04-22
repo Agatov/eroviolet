@@ -7,7 +7,7 @@ default_environment['GEM_PATH']= '/usr/local/lib/ruby/gems/1.9.1'
 
 set :rails_env, 'production'
 set :branch, 'master'
-set :application, 'eromassage'
+set :application, 'eroviolet'
 
 default_run_options[:pty] = true
 set :normalize_asset_timestamps, false

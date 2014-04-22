@@ -1,0 +1,31 @@
+%legend
+  Список програм
+  %a.btn{href: new_admin_program_path, style: 'float: right;'}
+    Добавить
+
+%table.table.table-striped
+  %thead
+    %tr
+      %th
+        Название
+      %th
+        Стоимость
+      %th
+        Длительность
+      %th
+        = '...'
+  %tbody
+    - @programs.each do |program|
+      %tr
+        %td
+          = program.name
+        %td
+          = program.price.to_s
+          рублей
+        %td
+          = program.duration.to_s
+          минут
+        %td
+          = link_to 'изменить', edit_admin_program_path(program)
+          %br
+          -#= link_to 'удалить', admin_girl_path(girl), method: :delete, confirm: 'Удалить!?'
