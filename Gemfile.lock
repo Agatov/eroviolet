@@ -1,5 +1,5 @@
 GIT
-  remote: http://github.com/brianmario/mysql2.git
+  remote: git://github.com/brianmario/mysql2.git
   revision: d0a51992b33761cc4d557274f57cf293292d3f5a
   specs:
     mysql2 (0.3.15)
