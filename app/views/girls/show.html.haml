@@ -55,32 +55,34 @@
 
 
 
-  -#.comments
-    - @girl.comment.each do |comment|
+
+
 
   .girl-comments
-    .comments
-      .comment
-        .username
-          Илья,
-          %span.date
-            14 мая 2014 года
 
-        .text
-          Приходил вчера к Дарье, она крутая, все сделала заебок
+    .comments
+      - @girl.comments.each do |comment|
+        .comment
+          .username
+            = "#{comment.username},"
+            %span.date
+              = comment.russian_date
+
+          .text
+            = comment.content
 
 
     .show-comment-form-container
       %a.show-comment-form{href: '#'}
         Оставить отзыв
 
-  .comment-form
-    .comment-form-title
-      Оставьте отзыв о девушке
-    %form
-      %input{type: :text, name: 'comment[username]', placeholder: 'Ваше имя'}
-      %textarea{name: 'comment[content]', placeholder: 'Текст вашего отзыва'}
-      %submit.button Оставить отзыв
+    .comment-form
+      .comment-form-title
+        Оставьте отзыв о девушке
+      %form{action: girl_comments_path(@girl), method: :post}
+        %input{type: :text, name: 'comment[username]', placeholder: 'Ваше имя'}
+        %textarea{name: 'comment[content]', placeholder: 'Текст вашего отзыва'}
+        %button.button{type: :submit} Оставить отзыв
 
   .triggers-title
     Почему стоит прийти к нам на массаж

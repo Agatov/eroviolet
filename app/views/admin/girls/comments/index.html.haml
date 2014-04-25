@@ -1,0 +1,29 @@
+%legend
+  Отзывы о массажистке
+  = @girl.name
+
+%table.table.table-striped
+  %thead
+    %tr
+      %th
+        Имя
+      %th
+        Комментарий
+      %th
+        Дата
+      %th
+        = '...'
+  %tbody
+    - @comments.each do |comment|
+      %tr
+        %td
+          = comment.username
+        %td
+          = comment.content
+        %td
+          = comment.russian_date
+          см
+        %td
+          = link_to 'изменить', edit_admin_girl_comment_path(@girl, comment)
+          %br
+          = link_to 'удалить', admin_girl_comment_path(@girl, comment), method: :delete, confirm: 'Удалить!?'

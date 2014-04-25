@@ -38,3 +38,5 @@
           = link_to 'изменить', edit_admin_girl_path(girl)
           %br
           = link_to 'удалить', admin_girl_path(girl), method: :delete, confirm: 'Удалить!?'
+          %br
+          = link_to 'отзывы', admin_girl_comments_path(girl)

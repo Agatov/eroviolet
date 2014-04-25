@@ -12,7 +12,7 @@ class Admin::GirlsController < AdminController
   end
 
   def create
-    @girl = Girl.new params[:girl]
+    @girl = Girl.new params[:girls]
 
     if @girl.save
       redirect_to admin_girls_path
@@ -28,7 +28,7 @@ class Admin::GirlsController < AdminController
   def update
     @girl = Girl.find params[:id]
 
-    if @girl.update_attributes(params[:girl])
+    if @girl.update_attributes(params[:girls])
       redirect_to admin_girls_path
     else
       render :edit
