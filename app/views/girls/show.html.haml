@@ -53,6 +53,35 @@
           width: 960,
           height: 540, frameborder: 0}
 
+
+
+  -#.comments
+    - @girl.comment.each do |comment|
+
+  .girl-comments
+    .comments
+      .comment
+        .username
+          Илья,
+          %span.date
+            14 мая 2014 года
+
+        .text
+          Приходил вчера к Дарье, она крутая, все сделала заебок
+
+
+    .show-comment-form-container
+      %a.show-comment-form{href: '#'}
+        Оставить отзыв
+
+  .comment-form
+    .comment-form-title
+      Оставьте отзыв о девушке
+    %form
+      %input{type: :text, name: 'comment[username]', placeholder: 'Ваше имя'}
+      %textarea{name: 'comment[content]', placeholder: 'Текст вашего отзыва'}
+      %submit.button Оставить отзыв
+
   .triggers-title
     Почему стоит прийти к нам на массаж
   .girl-triggers
