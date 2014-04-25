@@ -20,5 +20,6 @@ Eromassage::Application.routes.draw do
     end
 
     resources :programs
+    resources :extras
   end
 end

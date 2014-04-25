@@ -15,7 +15,7 @@
 
     .programs
 
-      - Program.order(:price).each do |program|
+      - Program.programs_only.order(:price).each do |program|
 
         .program-container{price: program.price, duration: program.duration}
           .program-header

@@ -1,0 +1,23 @@
+%section#extras.extras
+  .wrapper
+    .title
+      Дополнения
+
+
+    .programs
+
+      - Program.extras_only.order(:price).each do |program|
+
+        .program-container{price: program.price, duration: program.duration}
+          .program-header
+            .program-icon
+              .icon
+                = image_tag program.avatar_url
+            .program-title
+              = program.name
+
+          .program-desc
+            = program.about
+
+          .program-info
+            = program.info

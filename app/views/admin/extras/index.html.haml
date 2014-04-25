@@ -1,7 +1,7 @@
 %legend
-  Список програм
+  Список дополнений
 
-  %a.btn{href: new_admin_program_path, style: 'float: right;'}
+  %a.btn{href: new_admin_extra_path, style: 'float: right;'}
     Добавить
 
 %table.table.table-striped
@@ -27,6 +27,6 @@
           = program.duration.to_s
           минут
         %td
-          = link_to 'изменить', edit_admin_program_path(program)
+          = link_to 'изменить', edit_admin_extra_path(program)
           %br
           -#= link_to 'удалить', admin_girl_path(girl), method: :delete, confirm: 'Удалить!?'

@@ -1,6 +1,6 @@
-class Admin::ProgramsController < AdminController
+class Admin::ExtrasController < AdminController
   def index
-    @programs = Program.programs_only.order(:id)
+    @programs = Program.extras_only.order(:id)
   end
 
   def show
@@ -13,9 +13,10 @@ class Admin::ProgramsController < AdminController
 
   def create
     @program = Program.new params[:program]
+    @program.extra = 1
 
     if @program.save
-      redirect_to admin_programs_path
+      redirect_to admin_extras_path
     else
       render :new
     end
@@ -29,7 +30,7 @@ class Admin::ProgramsController < AdminController
     @program = Program.find params[:id]
 
     if @program.update_attributes(params[:program])
-      redirect_to admin_programs_path
+      redirect_to admin_extras_path
     else
       render :edit
     end
