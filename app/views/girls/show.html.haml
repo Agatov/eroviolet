@@ -49,7 +49,7 @@
   - if @girl.video?
     .girl-video-container
       .girl-video
-        %iframe{src: '//www.youtube.com/embed/Dk33QOsf4vo',
+        %iframe{src: "//www.youtube.com/embed/#{@girl.video}",
           width: 960,
           height: 540, frameborder: 0}
 
