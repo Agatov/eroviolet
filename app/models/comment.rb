@@ -5,7 +5,7 @@ class Comment < ActiveRecord::Base
 
 
   def russian_date
-    Russian::strftime(created_at, "%d %B %Y")
+    Russian::strftime(created_at, "%d %B %Y  (%H:%M)")
   end
 
 end
