@@ -69,7 +69,7 @@
               = comment.russian_date
 
           .text
-            = comment.content.gsub("\n", "<br />")
+            = comment.content.gsub("\n", "<br />").html_safe
 
 
     .show-comment-form-container
