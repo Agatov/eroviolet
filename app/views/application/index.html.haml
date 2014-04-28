@@ -12,7 +12,10 @@
         эротический массаж
 
 
-= render partial: 'application/sale'
+- if params[:sale] == 'thirty_minutes'
+  = render partial: 'application/sale'
+
+
 = render partial: 'application/triggers'
 
 
