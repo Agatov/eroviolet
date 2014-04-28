@@ -1,53 +1,56 @@
 #intro-short
-.wrapper
-  .girl-name
-    = link_to 'Главная страница', root_path
-    = '/'
-    Массажистка
-    = @girl.name
+.girl-top
+  .wrapper
+    .girl-name
+      = link_to 'Главная страница', root_path
+      &#8211;
+      Массажистка
+      = @girl.name
 
 
-  .girl-container
-    .girl-avatar
-      = image_tag @girl.avatar_url(:profile)
+    .girl-container
+      .girl-avatar
+        = image_tag @girl.avatar_url(:profile)
 
 
-    .previews
-      - @girl.photos.each do |photo|
-        .preview
-          %a{href: photo.image_url, 'data-lightbox' => 'girl'}
-            = image_tag photo.image_url(:long_preview)
-    .girl-params
-      .parameter
-        .label
-          Возраст:
-        .value
-          = @girl.age.to_s
-          лет
+      .previews
+        - @girl.photos.each do |photo|
+          .preview
+            %a{href: photo.image_url, 'data-lightbox' => 'girl'}
+              = image_tag photo.image_url(:long_preview)
+      .girl-params
+        .parameter
+          .label
+            Возраст:
+          .value
+            = @girl.age.to_s
+            лет
 
-      .parameter
-        .label
-          Грудь:
-        .value
-          = @girl.bubs.to_s
-          размер
+        .parameter
+          .label
+            Грудь:
+          .value
+            = @girl.bubs.to_s
+            размер
 
 
-      .parameter
-        .label
-          Рост:
-        .value
-          = @girl.height.to_s
-          см
-      .parameter
-        .label
-          Вес:
-        .value
-          = @girl.weight.to_s
-          кг
+        .parameter
+          .label
+            Рост:
+          .value
+            = @girl.height.to_s
+            см
+        .parameter
+          .label
+            Вес:
+          .value
+            = @girl.weight.to_s
+            кг
 
-  - if @girl.video?
-    .girl-video-container
+
+- if @girl.video?
+  .girl-video-container
+    .wrapper
       .girl-video
         %iframe{src: "//www.youtube.com/embed/#{@girl.video}",
           width: 960,
@@ -56,9 +59,8 @@
 
 
 
-
-
-  .girl-comments
+.girl-comments
+  .wrapper
     .comments-title
       Отзывы
 
@@ -86,6 +88,8 @@
         %textarea{name: 'comment[content]', placeholder: 'Текст вашего отзыва'}
         %button.button{type: :submit} Оставить отзыв
 
+
+.wrapper
   .triggers-title
     Почему стоит прийти к нам на массаж
   .girl-triggers
@@ -116,9 +120,13 @@
         включены в стоимость любой программы
 
 
-  .girl-form
 
 
+
+
+
+.girl-form
+  .wrapper
     .form-thank-you
       .thank-you-text
         .bolder.big Спасибо!
