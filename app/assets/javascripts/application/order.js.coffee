@@ -1,14 +1,33 @@
 $ ->
 
-   $('#submit-order').bind 'click', ->
-     $.post 'orders', {'order[username]': $('input[name=username]').val(), 'order[phone]': $('input[name=phone]').val()}, (data) =>
-      if data.status == 'ok'
 
-        form = $(@).parent()
-        form.hide 'slide', {direction: 'left'}, ->
-          $(".success").show 'slide', {direction: 'right'}, ->
-            setTimeout(
-              ->
-                hideDialog()
-              1000
-            )
+
+  $('#send-sale').on 'click', ->
+
+    username = $('input[name=username]')
+    phone = $('input[name=email]')
+
+    shake_fields = []
+
+    if username.val() < 2
+      shake_fields.push username
+
+    if phone.val() < 10
+      shake_fields.push phone
+
+    if shake_fields.length > 0
+      shake_field(field) for field in shake_fields
+      return false
+
+    $.post(
+      '/mailers/thirty_minutes.json',
+    {
+      'mail[username]': username.val(),
+      'mail[email]': phone.val()
+    },
+    (data) =>
+
+    )
+
+    show_thank_you()
+    reachGoal 'new_order'

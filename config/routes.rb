@@ -5,6 +5,10 @@ Eromassage::Application.routes.draw do
 
   resources :orders, only: :create
 
+  resource :mailers, only: :index do
+    post :thirty_minutes, on: :collection
+  end
+
   resources :girls, only: [:index, :show] do
     resources :comments, only: :create, controller: 'girls/comments'
   end

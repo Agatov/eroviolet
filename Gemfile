@@ -36,6 +36,9 @@ gem 'russian', '~> 0.6.0'
 gem 'flash_cookie_session'
 gem 'httparty'
 
+#gem 'uni_sender', :git => 'https://github.com/sharkzp/unisender.git'
+gem 'pony'
+
 gem 'meta-tags', :require => 'meta_tags'
 
 
