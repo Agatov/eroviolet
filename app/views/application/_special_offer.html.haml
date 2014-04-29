@@ -1,0 +1,76 @@
+%section.special-offer
+  .wrapper
+    .title
+      Ниразу у нас не были?
+      %small
+        Тогда для вас есть супер-предложение!
+
+  .wrapper
+    .special-program
+      .image
+        = image_tag 'bonus_program.png'
+
+      .content
+        .name Программа "Эротика плюс"
+        .about
+          В программу включены полчаса классического и час эротического массажа.
+          Длительность - 1 час, 45 минут.
+        .price
+          3 200 рублей
+
+
+  .wrapper
+    .bonuses-title
+      и подарки нашему дорогому гостю
+  .wrapper
+    .bonuses
+      .bonus
+        .top
+          = image_tag 'bonus_top_1.jpg'
+        .content
+          + 30 минут эротического массажа в подарок
+        .economy
+          Экономия: 1 200 рублей
+      .bonus
+
+        .top
+          = image_tag 'bonus_top_2.jpg'
+        .content
+          500 рублей на алкоголь в нашем баре на выбор
+        .economy
+          Экономия: 500 рублей ;)
+
+      .bonus.last
+
+        .top
+          = image_tag 'bonus_top_3.jpg'
+        .content
+          "Ветка сакуры" абсолютно бесплатно, то есть в подарок
+        .economy
+          Экономия: 1 000 рублей
+
+
+.sale-form
+  .wrapper
+    .form-thank-you
+      .thank-you-text
+        .bolder.big Получилось!
+        Ждем вас к нам в гости!
+
+
+
+    .form-block
+      .form-title
+        Акция длится до 2 мая
+        %br
+        Успейте получить бонусы на сумму 2 700 рублей!
+
+      .subtitle
+        Позвоните по номеру (495) 961 74 15 или оставьте ваши контактные данные в форме ниже
+        %br
+        и наш менеджер вам сам перезвонит в течение 10 минут!
+
+      %form
+        %input{type: :text, name: :username, placeholder: 'Ваше имя'}
+        %input{type: :text, name: :phone, placeholder: 'Ваш номер телефона'}
+        .button#send-sale Отправить

@@ -12,6 +12,8 @@
         эротический массаж
 
 
+- if params[:utm_medium] == 'context_text_cpc'
+  = render partial: 'application/special_offer'
 - if params[:sale] == 'thirty_minutes'
   = render partial: 'application/sale'
 
