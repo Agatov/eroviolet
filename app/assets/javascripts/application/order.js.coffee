@@ -23,7 +23,7 @@ $ ->
       '/orders',
     {
       'order[username]': username.val(),
-      'order[email]': phone.val()
+      'order[phone]': phone.val()
     },
     (data) =>
 

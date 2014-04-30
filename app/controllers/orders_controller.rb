@@ -2,7 +2,7 @@ class OrdersController < ApplicationController
 
   def create
 
-    message = "#{params[:order][:email]} - #{params[:order][:phone]}"
+    message = "#{params[:order][:username]} - #{params[:order][:phone]}"
 
     Pony.mail ({
         to: 'admass100@gmail.com, abardacha@gmail.com',
