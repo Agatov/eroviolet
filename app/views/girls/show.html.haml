@@ -10,7 +10,8 @@
 
     .girl-container
       .girl-avatar
-        = image_tag @girl.avatar_url(:profile)
+        %a{href: @girl.avatar_url, 'data-lightbox' => 'girl'}
+          = image_tag @girl.avatar_url(:profile)
 
 
       .previews
@@ -65,7 +66,7 @@
       Отзывы
 
     .comments
-      - @girl.comments.each do |comment|
+      - @girl.comments.order('id desc').each do |comment|
         .comment
           .username
             = "#{comment.username},"

@@ -5,9 +5,8 @@
   .info
     .name
       = girl.name
-      - if girl.id == 10 or girl.id == 11
-        .small
-          Новенькая
+      - if girl.video?
+        .small Есть видео
     .parameters
       .parameter
         .label
