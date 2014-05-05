@@ -4,7 +4,7 @@
       Дополнения
 
     .programs
-      - Program.programs_only.order(:price).each do |program|
+      - Program.extras_only.order(:price).each do |program|
         .program
           .program-image
             = image_tag program.avatar_url(:list)
