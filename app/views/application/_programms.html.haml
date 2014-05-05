@@ -16,17 +16,16 @@
     .programs
 
       - Program.programs_only.order(:price).each do |program|
-
-        .program-container{price: program.price, duration: program.duration}
-          .program-header
-            .program-icon
-              .icon
-                = image_tag program.avatar_url
-            .program-title
-              = program.name
-
-          .program-desc
-            = program.about
-
-          .program-info
-            = program.info
+        .program
+          .program-image
+            = image_tag program.avatar_url(:list)
+            .program-overlay
+              .program-name
+                = program.name
+          .program-footer
+            .time
+              = program.duration.to_s
+              минут
+            .price
+              = program.price.to_s
+              рублей
