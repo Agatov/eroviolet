@@ -22,14 +22,6 @@
         - else
           = link_to 'Программы', root_path(anchor: :programs)
 
-
-      %li
-        - if params[:controller] == 'application'
-          %a.nav-link{href: '#', rel_id: 'extras'}
-            Дополнения
-        - else
-          = link_to 'Дополнения', root_path(anchor: :extras)
-
       %li
         - if params[:controller] == 'application'
           %a.nav-link{href: '#', rel_id: 'map'}

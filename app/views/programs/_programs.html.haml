@@ -1,0 +1,36 @@
+%section#programs
+  .wrapper
+    .title
+      Наши программы
+
+
+    %ul.programs-filter
+      %li.active
+        %a{rel: :programs, min: 0, max: 5000, href: '#'} До 5000 рублей
+      %li
+        %a{rel: :programs, min: 5000, max: 10000, href: '#'} До 10 000 рублей
+      %li
+        %a{rel: :programs, min: 10001, max: 100000, href: '#'} От 10 000 рублей
+
+      %li.last
+        %a{rel: :extras, href: '#'} Дополнения
+
+
+    .programs
+
+      - Program.programs_only.order(:price).each do |program|
+        = render partial: 'programs/program', locals: {program: program, rel: :program}
+
+      - Program.extras_only.order(:price).each do |program|
+        = render partial: 'programs/program', locals: {program: program, rel: :extra}
+
+.program-desc-modal-overlay
+.program-desc-modal
+  .program-name
+  .program-desc
+  .program-info
+    %span.time
+      30 минут
+    = '/'
+    %span.price
+      1 200 рублей
