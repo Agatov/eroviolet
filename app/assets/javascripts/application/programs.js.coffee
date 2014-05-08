@@ -1,6 +1,6 @@
 $ ->
 
-  hide_or_show_programs(program, $('.programs-filter li a').first()) for program in $('.program')
+  hide_or_show_programs(program, $('.programs-filter li a').first()) for program in $('.program[rel=program]')
   hide_extras()
 
 
@@ -15,7 +15,7 @@ $ ->
 
     if $(@).attr('rel') == 'programs'
       hide_extras()
-      hide_or_show_programs(program, link) for program in $('.program')
+      hide_or_show_programs(program, link) for program in $('.program[rel=program]')
     else
       show_extras()
 
