@@ -4,24 +4,20 @@
     .intro-title
       Массажный салон
       %span.blue Виолет
-      %br
       приглашает мужчин
       %br
       на
       %span.blue
         эротический массаж
 
-      %br
-      м. Краснопресненская
-
 
 
 -#= render partial: 'application/special_offer'
-= render partial: 'application/triggers'
+-#= render partial: 'application/triggers'
 
 
 
-%section#girls
+%section
   .wrapper
     .title
       Наши девушки
@@ -29,9 +25,9 @@
 
 
 
-    .girls
+    .girls2
       - @girls.each do |girl|
-        = render partial: 'girls/girl', locals: {girl: girl}
+        = render partial: 'girls/girl2', locals: {girl: girl}
 
 
 = render partial: 'programs/programs'

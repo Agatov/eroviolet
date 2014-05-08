@@ -1,0 +1,10 @@
+.girl
+  .img
+    %a{href: girl_path(girl)}
+      = image_tag girl.avatar_url(:profile)
+  .info
+    .name
+      = girl.name
+    .params
+      = girl.age.to_s
+      лет
