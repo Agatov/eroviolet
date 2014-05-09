@@ -9,6 +9,10 @@ class ApplicationController < ActionController::Base
     @girls = Girl.order(:id)
     @rooms = Room.order(:id)
 
+    if params[:utm_source]
+      session[:utm_source] = params[:utm_source]
+    end
+
     set_meta_tags title: I18n.translate('site_title')
   end
 

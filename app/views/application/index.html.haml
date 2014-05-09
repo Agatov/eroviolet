@@ -12,12 +12,15 @@
 
 
 
--#= render partial: 'application/special_offer'
+- if params[:utm_source] == 'yandex' or session[:utm_source] == 'yandex'
+  = render partial: 'application/special_offer'
+
+
 -#= render partial: 'application/triggers'
 
 
 
-%section
+%section#girls
   .wrapper
     .title
       Наши девушки
