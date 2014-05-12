@@ -27,6 +27,9 @@ $ ->
 
     $('.program-desc-modal .program-name').text $(@).find('.program-name').text()
     $('.program-desc-modal .program-desc').text $(@).find('.program-desc').text()
+    $('.program-desc-modal .program-info .time').text $(@).find('.time').text()
+    $('.program-desc-modal .program-info .price').text $(@).find('.price').text()
+
 
     $('.program-desc-modal-overlay').show()
     $('.program-desc-modal').show()

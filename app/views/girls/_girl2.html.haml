@@ -1,4 +1,7 @@
 .girl
+  - if girl.video?
+    .video есть видео
+
   .img
     %a{href: girl_path(girl)}
       = image_tag girl.avatar_url(:profile)
