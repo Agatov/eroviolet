@@ -16,6 +16,10 @@ class ApplicationController < ActionController::Base
     set_meta_tags title: I18n.translate('site_title')
   end
 
+  def job
+
+  end
+
   def mobile_device?
     #request.format = :mobile
 

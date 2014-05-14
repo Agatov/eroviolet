@@ -3,6 +3,8 @@ Eromassage::Application.routes.draw do
 
   root to: 'application#index'
 
+  match 'job' => 'application#job'
+
   resources :orders, only: :create
 
   resource :mailers, only: :index do
