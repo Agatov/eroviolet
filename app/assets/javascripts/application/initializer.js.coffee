@@ -2,7 +2,7 @@ $ ->
 
   $('.nav-link').bind 'click', ->
     position = $("##{$(@).attr('rel_id')}").offset().top
-    $('body').animate({scrollTop: "#{position - 75}px"}, 300)
+    $('body').animate({scrollTop: "#{position}px"}, 300)
     false
 
   $('.show-comment-form').on 'click', ->
@@ -13,3 +13,11 @@ $ ->
     $('body').animate({scrollTop: "#{position - 100}px"}, 300)
 
     false
+
+  $('#banners').bxSlider({
+    nextSelector: '#next-banner',
+    prevSelector: '#prev-banner',
+    #nextText: "<img src='/images/right_arrow_icon_60.png'>",
+    #prevText: "<img src='/images/left_arrow_icon_60.png'>",
+    pagerCustom: '#banners-pager'
+  })

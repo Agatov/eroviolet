@@ -1,19 +1,33 @@
-#no-sex
+-#no-sex
   Строго без
   интима!
 
-.padder
-#intro
+.banners
   .wrapper
-    .intro-title
-      Массажный салон
-      %span.blue Виолет
-      приглашает мужчин
-      %br
-      на
-      %span.blue
-        эротический массаж
+    #banners
+      .banner
+        = image_tag 'banners/night.jpg'
+      .banner
+        = image_tag 'banners/morning.jpg'
+      .banner
+        = image_tag 'banners/card.jpg'
+    .banners-navigation
+      .prev#prev-banner
+      %ul.pager#banners-pager
+        %li.page
+          %a{href: '', 'data-slide-index' => 0}
+            = image_tag 'banners/night.jpg'
 
+        %li.page
+          %a{href: '', 'data-slide-index' => 1}
+            = image_tag 'banners/morning.jpg'
+
+        %li.page.last
+          %a{href: '', 'data-slide-index' => 2}
+            = image_tag 'banners/card.jpg'
+
+
+      .next#next-banner
 
 
 - if params[:utm_source] == 'yandex' or session[:utm_source] == 'yandex'

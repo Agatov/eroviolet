@@ -1,4 +1,5 @@
 //= require lib/jquery-1.9.1
+//= require lib/bxslider
 //= require application/initializer
 //= require application/programs
 //= require application/girl_profile

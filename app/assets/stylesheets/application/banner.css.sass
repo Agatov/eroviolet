@@ -1,0 +1,63 @@
+.banners
+  padding: 30px 0
+
+  .bx-wrapper
+    width: 960px
+    height: 400px
+    display: block
+
+    .bx-viewport
+      height: 402px !important
+
+      #banners
+
+        .banner
+          width: 960px
+          height: 399px
+          border: 1px solid #ddd
+
+          img
+            width: 958px
+
+
+  .banners-navigation
+    padding: 10px 0
+    @include thumbnails_parent
+
+    .prev
+      display: none
+      float: left
+      width: 50px
+      height: 92px
+      background: blue
+
+    .pager
+      @include thumbnails_parent
+      padding: 0px 80px
+      width: 800px
+      height: 90px
+      cursor: pointer
+
+
+      .page
+        float: left
+        width: 218px
+        height: 91px
+        margin-right: 70px
+        border: 1px solid #bbb
+
+        &.last
+          margin-right: 0px
+
+        img
+          width: 218px
+
+
+
+
+    .next
+      display: none
+      float: right
+      width: 50px
+      height: 92px
+      background: blue
