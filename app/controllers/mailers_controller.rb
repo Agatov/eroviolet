@@ -3,7 +3,7 @@ class MailersController < ApplicationController
   def index
   end
 
-  def thirty_minutes
+  def special_offer
 
     Pony.mail ({
       to: params[:mail][:email],

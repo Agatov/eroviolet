@@ -8,7 +8,7 @@ Eromassage::Application.routes.draw do
   resources :orders, only: :create
 
   resource :mailers, only: :index do
-    post :thirty_minutes, on: :collection
+    post :special_offer, on: :collection
   end
 
   resources :girls, only: [:index, :show] do

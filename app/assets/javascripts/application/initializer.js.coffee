@@ -21,3 +21,8 @@ $ ->
     #prevText: "<img src='/images/left_arrow_icon_60.png'>",
     pagerCustom: '#banners-pager'
   })
+
+
+  $('.get-sale').on 'click', ->
+    $('.action-bottom .wrapper .info').hide()
+    $('.action-bottom .wrapper .form').show()

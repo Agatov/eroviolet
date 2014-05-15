@@ -1,78 +1,172 @@
-.special-offer
-  padding: 50px 0
+.action
+  width: 100%
+  height: 650px
+  background: url('/assets/intro_bg.jpg')
+  background-position: 50% 50%
+
+  .offer
+    padding-top: 120px
+    color: #1f2426
+    font-size: 44px
+    text-transform: uppercase
+    line-height: 1.3
+    .bold
+      font-family: 'Roboto-Bold'
+
+    .program-name
+      color: #ec6e46
 
 
-  .special-program
-    width: 960px
-    height: 240px
-    background: #ecf0f1
-    margin: 25px 0
-    @include thumbnails_parent
+    .price
+      padding-top: 30px
+      font-size: 24px
 
-    .image
-      float: left
-      width: 240px
-      height: 200px
-      padding: 20px
-      margin-left: 130px
-
-    .content
-      float: left
-      width: 400px
-      padding: 20px
-
-      .name
-        padding-top: 30px
-        font-size: 24px
-        color: #2d2d2d
-
-      .about
-        padding-top: 20px
-        font-size: 15px
-        line-height: 1.3
+      .line-through
+        text-decoration: line-through
 
 
-      .price
-        font-size: 24px
-        padding-top: 20px
+  .bonuses
+    padding: 45px 0px
+    .bonus
+      margin-bottom: 40px
+      span
+        padding: 13px 40px
+        color: #fff
+        font-family: 'Roboto-Regular'
+        font-size: 16px
+        background: -webkit-linear-gradient(top, #f69656, #ec6d46)
 
+  .timer
+    font-size: 24px
+    .timer-label
+      font-family: 'Roboto-Light'
+    .timer-value
+      font-family: 'Roboto-Bold'
 
-
-.bonuses-title
-  @include thumbnails_parent
-  width: 960px
-  height: 70px
-  line-height: 70px
-  background: #27ae60
-  margin: 30px auto
-  font-size: 24px
+.action-bottom
+  width: 100%
+  height: 400px
+  background: url('/assets/wood_bg.jpg') no-repeat
+  background-position: 50% 50%
   color: #fff
-  text-align: center
 
+  .info
 
-.bonuses
-  margin: 25px 0
-  @include thumbnails_parent
-  .bonus
-    float: left
-    width: 300px
-    //height: 200px
-    background: #ecf0f1
-    margin-right: 30px
+    .how
+      padding-top: 115px
+      font-size: 44px
+      font-family: 'Roboto-Light'
+      text-transform: uppercase
 
-    &.last
-      margin-right: 0px
-
-    .top
-      width: 300px
-      height: 50px
-
-    .content
-      padding: 15px
+    .how-to
+      width: 530px
+      padding-top: 30px
+      font-family: 'Roboto-Regular'
       font-size: 16px
       line-height: 1.3
 
-    .economy
-      padding: 15px
-      font-size: 14px
-      color: #444
+    .button
+      position: absolute
+      top: 160px
+      right: 0px
+      width: 380px
+      height: 80px
+      line-height: 80px
+      background: -webkit-linear-gradient(top, #f69656, #ec6d46)
+      font-family: 'Roboto-light'
+      font-size: 28px
+      color: #1f2426
+      text-transform: uppercase
+      text-align: center
+      cursor: pointer
+      -webkit-transition: all 0.15s
+      &:hover
+        background: -webkit-linear-gradient(top, #ff9b59, #f66f48)
+
+
+  .form
+    display: none
+
+
+    .form-block
+      padding: 80px 0
+      color: #fff
+
+      .form-title
+        font-family: 'Roboto-Light'
+        font-size: 32px
+        text-align: center
+        line-height: 1.3
+
+      .subtitle
+        padding: 20px 0
+        font-family: 'Roboto-Light'
+        font-size: 18px
+        line-height: 1.3
+        text-align: center
+
+
+      form
+
+        dispaly: block
+        width: 710px
+        margin: 0px auto
+
+        input
+          width: 220px
+          height: 40px
+          padding: 0px 10px
+          font-family: 'Roboto-Regular'
+          font-size: 15px
+          color: #2d2d2d
+          outline: none
+          border: 1px solid #ccc
+          background: #fff
+          margin-right: 10px
+
+
+        .button
+          display: inline-block
+          width: 180px
+          height: 40px
+          line-height: 40px
+
+          text-align: center
+          color: #fff
+
+          font-family: 'Roboto-Light'
+          font-size: 18px
+
+          background: -webkit-linear-gradient(top, #f69656, #ec6d46)
+
+          margin-left: 10px
+
+          cursor: pointer
+          -webkit-transition: all 0.15s
+
+          &:hover
+            background: -webkit-linear-gradient(top, #ff9b59, #f66f48)
+
+
+    .form-thank-you
+
+      display: none
+      opacity: 0
+      padding: 100px 0
+      color: #fff
+
+      .thank-you-text
+        font-family: 'Roboto-Light'
+        font-size: 24px
+        color: #fff
+        text-align: center
+        line-height: 1.3
+
+
+        .big
+          font-size: 48px
+          padding-bottom: 40px
+
+        .bolder
+          font-family: 'Roboto-Light'
+

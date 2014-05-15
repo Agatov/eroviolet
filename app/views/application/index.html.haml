@@ -2,6 +2,79 @@
   Строго без
   интима!
 
+
+.action
+  .wrapper
+    .offer
+      %span.bold Скидка 52%
+      На программу
+      .program-name "Сладкий Экспресс"
+      .price
+        1 200 рублей вместо
+        %span.line-through 2 500 рублей
+
+
+    .bonuses
+      .bonus
+        %span Бонус: Дополнение "Душ с девушкой" - бесплатно
+      .bonus
+        %span Бонус: Дополнение "Потрогать массажистку" - бесплатно
+      .bonus
+        %span Бонус: Бокал коньяка - в подарок
+
+    .timer
+      %span.timer-text
+        До конца акции осталось:
+      %span.timer-value
+        %span#hours
+        часов,
+        %span#minutes
+        мин,
+        %span#seconds
+        сек
+
+
+.action-bottom
+  .wrapper.relative
+    .info
+      .button.get-sale
+        Получить скидку
+      .how Как получить скидку?
+      .how-to
+        Запишитесь по телефону на программу до конца акции или
+        нажмите кнопку «Получить скидку» и заполните форму.
+        %br
+        %br
+
+        Вам на e-mail придет промокод, который позволит воспользоваться
+        скидкой в течение пяти дней.
+    .form
+      .form-block
+        .form-title
+          Успейте получить скидку,
+          %br
+          акция закончится уже совсем скоро!
+
+
+        .subtitle
+          Оставьте ваше имя и e-mail в форме ниже, и вам придет письмо с промокодом,
+          %br
+          который позволится воспользоваться скидкой в течение недели.
+
+        %form
+          %input{type: :text, name: :username, placeholder: 'Ваше имя'}
+          %input{type: :text, name: :email, placeholder: 'Ваш e-mail'}
+          .button#send-special-offer Отправить
+
+      .form-thank-you
+        .thank-you-text
+          .bolder.big Спасибо!
+          Ваш промокод - "45-13"
+          %br
+          %br
+          %br
+
+
 .banners
   .wrapper
     #banners

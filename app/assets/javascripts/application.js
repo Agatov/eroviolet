@@ -7,3 +7,4 @@
 //= require application/lightbox
 //= require application/form
 //= require application/order
+//= require application/countdown
