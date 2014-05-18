@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
   before_filter :mobile_device?
 
   def index
-    @girls = Girl.order(:id)
+    @girls = Girl.order('updated_at desc')
     @rooms = Room.order(:id)
 
     if params[:utm_source]
