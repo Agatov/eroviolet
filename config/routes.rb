@@ -15,6 +15,9 @@ Eromassage::Application.routes.draw do
     resources :comments, only: :create, controller: 'girls/comments'
   end
 
+  resources :programs, only: :index
+
+
   namespace :admin do
     resources :girls do
       resources :photos, only: [:create, :destroy]

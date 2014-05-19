@@ -33,27 +33,6 @@
 
       .next#next-banner
 
-
--#= render partial: 'application/triggers'
-
-
-
-%section#girls
-  .wrapper
-    .title
-      Наши девушки
-
-
-
-
-    .girls2
-      - @girls.each do |girl|
-        = render partial: 'girls/girl2', locals: {girl: girl}
-
-
-= render partial: 'programs/programs'
-
-
 #address
   м. Краснопресненская, Волков переулок, дом 13, с1
 #map

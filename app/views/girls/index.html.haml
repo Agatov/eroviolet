@@ -1,0 +1,11 @@
+%section#girls
+  .wrapper
+    .title
+      Наши девушки
+
+
+
+
+    .girls2
+      - @girls.each do |girl|
+        = render partial: 'girls/girl2', locals: {girl: girl}
