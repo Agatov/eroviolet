@@ -3,25 +3,19 @@
     %ul.navigation
 
       %li
-        - if params[:controller] == 'application'
-          %a.nav-link{href: '#', rel_id: 'girls'}
-            Девушки
-        - else
-          = link_to 'Девушки', root_path(anchor: :girls)
-
+        = link_to 'Девушки', girls_path
       %li
-        - if params[:controller] == 'application'
-          %a.nav-link{href: '#', rel_id: 'programs'}
-            Программы
-        - else
-          = link_to 'Программы', root_path(anchor: :programs)
-
+        = link_to 'Программы', programs_path
       %li
         - if params[:controller] == 'application'
           %a.nav-link{href: '#', rel_id: 'map'}
             Контакты
         - else
           = link_to 'Контакты', root_path(anchor: :map)
+      %li
+        %a{href: '/job'} Работа для девушек
+
+
 
 
 
