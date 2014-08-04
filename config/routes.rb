@@ -31,4 +31,9 @@ Eromassage::Application.routes.draw do
     resources :programs
     resources :extras
   end
+
+
+  namespace :manager do
+    resources :girls
+  end
 end

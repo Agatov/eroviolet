@@ -1,0 +1,23 @@
+%table.table.table-striped
+  %thead
+    %tr
+      %th
+        Имя
+      %th
+        Работает?
+      %th
+        Когда работает?
+      %th
+        = '...'
+  %tbody
+    - @girls.each do |girl|
+      %tr
+        = simple_form_for girl, url: manager_girl_path(girl) do |f|
+          %td
+            = girl.name
+          %td
+            = f.input :available_today, as: :radio
+          %td
+            = f.input :available_date
+          %td{valign: :middle}
+            = f.submit 'ололо', class: [:btn, 'btn-success']

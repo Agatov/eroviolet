@@ -1,7 +1,7 @@
 class GirlsController < ApplicationController
 
   def index
-    @girls = Girl.order('updated_at desc')
+    @girls = Girl.order('available_today desc')
   end
 
   def show

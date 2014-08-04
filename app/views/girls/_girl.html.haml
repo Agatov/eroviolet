@@ -5,8 +5,8 @@
   .info
     .name
       = girl.name
-      - if girl.video?
-        .small Есть видео
+      - if girl.available_today?
+        .small Работает сегодня
     .parameters
       .parameter
         .label

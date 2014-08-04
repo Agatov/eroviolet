@@ -1,6 +1,10 @@
 .girl
-  - if girl.video?
-    .video есть видео
+  - if girl.available_today?
+    .available Работает сегодня
+  - else
+    .not-available
+      Будет ждать вас
+      = girl.available_date
 
   .img
     %a{href: girl_path(girl)}

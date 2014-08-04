@@ -1,5 +1,5 @@
 class Girl < ActiveRecord::Base
-  attr_accessible :about, :age, :available_today, :avatar, :bubs, :height, :name, :weight, :eyes, :name_for_form, :video
+  attr_accessible :about, :age, :available_today, :avatar, :bubs, :height, :name, :weight, :eyes, :name_for_form, :video, :available_date
 
   has_many :girl_photos
   has_many :photos, through: :girl_photos
