@@ -1,12 +1,41 @@
-#no-sex
-  Строго без
-  интима!
+.action
+  .wrapper
+    .offer
+      Хотите получить
+      %br
+      %span.bold скидку 500 рублей
+      %br
+      на любую программу
+      %br
+      в нашем салоне?
 
-- if params[:utm_source] == 'yandex' or session[:utm_source] == 'yandex'
-  = render partial: 'application/special_offer'
+    .button Да, я хочу скидку!
 
 
-.banners
+
+.action-bottom
+  .wrapper.relative
+    .form
+      .form-block
+        .form-title
+          Заполните форму ниже
+          %br
+          и вам на почту придет письмо с кодовым словом для скидки!
+
+        %form
+          %input{type: :text, name: :username, placeholder: 'Ваше имя'}
+          %input{type: :text, name: :email, placeholder: 'Ваш e-mail'}
+          .button#send-special-offer Отправить
+
+      .form-thank-you
+        .thank-you-text
+          .bolder.big Спасибо!
+          Ваш промокод - "45-13"
+          %br
+          %br
+          %br
+
+-#.banners
   .wrapper
     #banners
       .banner

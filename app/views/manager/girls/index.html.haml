@@ -16,8 +16,8 @@
           %td
             = girl.name
           %td
-            = f.input :available_today, as: :radio
+            = f.input :available_today, as: :radio, label: false
           %td
-            = f.input :available_date
+            = f.input :available_date, label: false
           %td{valign: :middle}
-            = f.submit 'ололо', class: [:btn, 'btn-success']
+            = f.submit 'Применить', class: [:btn, 'btn-success']

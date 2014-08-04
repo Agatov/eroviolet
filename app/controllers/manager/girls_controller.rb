@@ -1,5 +1,5 @@
 class Manager::GirlsController < ApplicationController
-
+  #http_basic_authenticate_with name: "manager", password: "kirillprostosexy"
   layout 'manager'
 
   def index
