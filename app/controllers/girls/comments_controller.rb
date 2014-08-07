@@ -1,4 +1,4 @@
-class Girls::CommentsController < AdminController
+class Girls::CommentsController < ApplicationController
   def create
     @girl = Girl.find params[:girl_id]
     @comment = Comment.new params[:comment]

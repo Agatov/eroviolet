@@ -6,13 +6,22 @@ $ ->
     false
 
   $('.show-comment-form').on 'click', ->
-    $(@).hide()
+
+    if $(@).attr('parent_id')
+      $('#parent_id').val($(@).attr('parent_id'))
+      $('.comment-form-title').text('Ответить на комментарий')
+    else
+      $('#parent_id').val('')
+      $('.comment-form-title').text('Оставить отзыв о девушке')
+
+    $('.comment-form-overlay').show()
     $('.comment-form').show()
 
-    position = $(".comment-form").offset().top
-    $('body').animate({scrollTop: "#{position - 100}px"}, 300)
-
     false
+
+  $('.comment-form-overlay').on 'click', ->
+    $(@).hide()
+    $('.comment-form').hide()
 
   $('#banners').bxSlider({
     nextSelector: '#next-banner',

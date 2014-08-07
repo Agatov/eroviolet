@@ -1,7 +1,9 @@
+.comment-form-overlay
+
 .girl-top
   .wrapper
     .girl-name
-      = link_to 'Главная страница', root_path
+      = link_to 'Все девушки', girls_path
       &#8211;
       Массажистка
       = @girl.name
@@ -65,7 +67,7 @@
       Отзывы
 
     .comments
-      - @girl.comments.order('id desc').each do |comment|
+      - @girl.comments.where(parent_id: nil).order('id desc').each do |comment|
         .comment
           .username
             = "#{comment.username},"
@@ -74,6 +76,19 @@
 
           .text
             = comment.content.gsub("\n", "<br />").html_safe
+
+          - unless comment.parent_id
+            %a.show-comment-form{href: '#', parent_id: comment.id.to_s} Ответить на комментарий
+
+        - Comment.where(parent_id: comment.id).order('id asc').each do |comment2|
+          .comment{style: 'margin-left: 40px;'}
+            .username
+              = "#{comment2.username},"
+              %span.date
+                = comment2.russian_date
+
+            .text
+              = comment2.content.gsub("\n", "<br />").html_safe
 
 
     .show-comment-form-container
@@ -86,6 +101,7 @@
       %form{action: girl_comments_path(@girl), method: :post}
         %input{type: :text, name: 'comment[username]', placeholder: 'Ваше имя'}
         %textarea{name: 'comment[content]', placeholder: 'Текст вашего отзыва'}
+        %input#parent_id{type: :hidden, name: 'comment[parent_id]'}
         %button.button{type: :submit} Оставить отзыв
 
 

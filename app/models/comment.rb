@@ -1,5 +1,5 @@
 class Comment < ActiveRecord::Base
-  attr_accessible :answer, :content, :moderated, :username, :created_at
+  attr_accessible :answer, :content, :moderated, :username, :created_at, :parent_id
 
   has_many :girl_comments
 
