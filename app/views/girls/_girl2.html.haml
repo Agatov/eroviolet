@@ -15,6 +15,6 @@
     .params
       = girl.age.to_s
       = Russian.p girl.age, 'год', 'года', 'лет'
-
+      %br
       = girl.comments_count.to_s
-      комментов
+      = Russian.p girl.comments_count, 'отзыв', 'отзыва', 'отзывов'
