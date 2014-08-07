@@ -64,11 +64,18 @@
 .girl-comments
   .wrapper
     .comments-title
-      Отзывы
+      Последние отзывы
 
+    - n = 0
+    - visibility_class = ''
     .comments
       - @girl.comments.where(parent_id: nil).order('id desc').each do |comment|
-        .comment
+        - n += 1
+        - if n > 4
+          - visibility_class = 'hidden'
+
+
+        .comment{class: visibility_class}
           .username
             = "#{comment.username},"
             %span.date
@@ -81,7 +88,7 @@
             %a.show-comment-form{href: '#', parent_id: comment.id.to_s} Ответить на комментарий
 
         - Comment.where(parent_id: comment.id).order('id asc').each do |comment2|
-          .comment{style: 'margin-left: 40px;'}
+          .comment{style: 'margin-left: 40px;', class: visibility_class}
             .username
               = "#{comment2.username},"
               %span.date
@@ -94,6 +101,10 @@
     .show-comment-form-container
       %a.show-comment-form{href: '#'}
         Оставить отзыв
+
+      %a.show-hidden-comments{href: '#'}
+        Показать все отзывы
+        = "(#{@girl.comments_count.to_s})"
 
     .comment-form
       .comment-form-title

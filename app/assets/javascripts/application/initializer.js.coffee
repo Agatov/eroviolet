@@ -23,6 +23,11 @@ $ ->
     $(@).hide()
     $('.comment-form').hide()
 
+  $('.show-hidden-comments').on 'click', ->
+    $(".comment").removeClass('hidden')
+    $(@).hide()
+    false
+
   $('#banners').bxSlider({
     nextSelector: '#next-banner',
     prevSelector: '#prev-banner',
