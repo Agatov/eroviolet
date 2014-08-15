@@ -1,13 +1,1 @@
-%section#girls
-  .wrapper
-    .title
-      Наши девушки
-      .small
-        Все наши девушки имеют диплом об окончании массажных курсов и не оказаывают интимных услуг.
-
-
-
-
-    .girls2
-      - @girls.each do |girl|
-        = render partial: 'girls/girl2', locals: {girl: girl}
+= render partial: 'girls/girls_list', locals: {girls: @girls}

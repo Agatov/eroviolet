@@ -1,0 +1,19 @@
+%section#girls
+  .wrapper
+    .title
+      Наши девушки
+      .small
+        Все наши девушки имеют диплом об окончании массажных курсов и не оказаывают интимных услуг.
+
+
+
+
+    .girls2
+      - girls[0..2].each do |girl|
+        = render partial: 'girls/girl2', locals: {girl: girl}
+
+    = render partial: 'application/inline_banner'
+
+    .girls2
+      - girls[3..100].each do |girl|
+        = render partial: 'girls/girl2', locals: {girl: girl}

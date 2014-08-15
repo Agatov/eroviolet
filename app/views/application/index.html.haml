@@ -1,70 +1,30 @@
 .action
   .wrapper
+
     .offer
-      Хотите получить
+      Салон эротического
       %br
-      %span.bold скидку 500 рублей
+      массажа
+      %span.bold "Виолет"
       %br
-      на любую программу
+      приглашает вас в гости
+
       %br
-      в нашем салоне?
+      %br
+      .small
+        Мы находимся на
+        %span.bold м. Краснопресненская
 
-    .button Да, я хочу скидку!
+    .button Схема проезда
 
-
-
-.action-bottom
-  .wrapper.relative
-    .form
-      .form-block
-        .form-title
-          Заполните форму ниже
-          %br
-          и вам на почту придет письмо с кодовым словом для скидки!
-
-        %form
-          %input{type: :text, name: :username, placeholder: 'Ваше имя'}
-          %input{type: :text, name: :email, placeholder: 'Ваш e-mail'}
-          .button#send-special-offer Отправить
-
-      .form-thank-you
-        .thank-you-text
-          .bolder.big Спасибо!
-          Ваш промокод - "45-13"
-          %br
-          %br
-          %br
-
--#.banners
-  .wrapper
-    #banners
-      .banner
-        = image_tag 'banners/night.jpg'
-      .banner
-        = image_tag 'banners/morning.jpg'
-      .banner
-        = image_tag 'banners/card.jpg'
-    .banners-navigation
-      .prev#prev-banner
-      %ul.pager#banners-pager
-        %li.page
-          %a{href: '', 'data-slide-index' => 0}
-            = image_tag 'banners/night.jpg'
-
-        %li.page
-          %a{href: '', 'data-slide-index' => 1}
-            = image_tag 'banners/morning.jpg'
-
-        %li.page.last
-          %a{href: '', 'data-slide-index' => 2}
-            = image_tag 'banners/card.jpg'
+= render partial: 'girls/girls_list', locals: {girls: @girls}
 
 
-      .next#next-banner
 
 #address
   м. Краснопресненская, Волков переулок, дом 13, с1
-#map
+.wrapper
+  #map
 
 .ololo{style: 'height: 50px; line-height: 50px; text-align: center;'}
   %a{href: 'http://www.rusdosug.com'} Rusdosug

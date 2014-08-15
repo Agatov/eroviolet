@@ -3,7 +3,7 @@
     .available Работает сегодня
   - else
     .not-available
-      Будет ждать вас
+      Работает
       = girl.available_date
 
   .img
@@ -11,10 +11,19 @@
       = image_tag girl.avatar_url(:profile)
   .info
     .name
-      = girl.name
+      = "#{girl.name},"
+      %span.age
+        = girl.age.to_s
+        = Russian.p girl.age, 'год', 'года', 'лет'
     .params
-      = girl.age.to_s
-      = Russian.p girl.age, 'год', 'года', 'лет'
+      -#%span.age
+        = girl.age.to_s
+        = Russian.p girl.age, 'год', 'года', 'лет'
+      %span
+        %a{href: girl_path(girl, anchor: 'comments')}
+          = girl.comments_count.to_s
+          = Russian.p girl.comments_count, 'отзыв', 'отзыва', 'отзывов'
+
       %br
-      = girl.comments_count.to_s
-      = Russian.p girl.comments_count, 'отзыв', 'отзыва', 'отзывов'
+      %span
+        = link_to 'Смотреть видео с девушкой', girl_path(girl, anchor: 'video')

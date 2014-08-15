@@ -8,3 +8,4 @@
 //= require application/form
 //= require application/order
 //= require application/countdown
+//= require application/inline-form

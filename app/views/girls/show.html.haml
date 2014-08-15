@@ -51,7 +51,7 @@
 
 
 - if @girl.video?
-  .girl-video-container
+  .girl-video-container#video
     .wrapper
       .girl-video
         %iframe{src: "//www.youtube.com/embed/#{@girl.video}",
@@ -61,7 +61,7 @@
 
 
 
-.girl-comments
+.girl-comments#comments
   .wrapper
     .comments-title
       Последние отзывы

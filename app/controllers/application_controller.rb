@@ -12,6 +12,8 @@ class ApplicationController < ActionController::Base
     end
 
     set_meta_tags title: I18n.translate('site_title')
+
+    @girls = Girl.order('available_today desc')
   end
 
   def job
