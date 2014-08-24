@@ -1,21 +1,43 @@
 .action
   .wrapper
 
-    .offer
-      Салон эротического
-      %br
-      массажа
-      %span.bold "Виолет"
-      %br
-      приглашает вас в гости
+    - if params[:utm_source] == 'yandex' or session[:utm_source] == 'yandex'
 
-      %br
-      %br
-      .small
-        Мы находимся на
-        %span.bold м. Краснопресненская
+      .offer
+        %span.splashed 
+          Только сегодня утром!
+        %br
+        %br
+        %span.bold 30 минут
+        %br
+        эротического массажа 
+        %br
+        %span.bold в подарок!
 
-    %a.button{href: girls_path, style: 'display: block; text-decoration: none'} Наши массажистки
+        %br
+        %br
+
+        .small
+          Акция действует до 12:00
+          24 августа
+
+    - else
+
+      .offer
+        Салон эротического
+        %br
+        массажа
+        %span.bold "Виолет"
+        %br
+        приглашает вас в гости
+
+        %br
+        %br
+        .small
+          Мы находимся на
+          %span.bold м. Краснопресненская
+
+      %a.button{href: girls_path, style: 'display: block; text-decoration: none'} Наши массажистки
 
 = render partial: 'girls/girls_list', locals: {girls: @girls}
 
