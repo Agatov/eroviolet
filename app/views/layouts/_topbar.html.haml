@@ -22,9 +22,11 @@
       %li.right
         .phone
           - if params[:utm_source] == 'yandex' or session[:utm_source] == 'yandex'
-            8 (967) 078-73-35
+            %a{href: 'tel://89670787335', style: 'decoration: none:'} 
+              8 (967) 078-73-35
             .small Работаем круглосуточно
 
           - else
-            8 (495) 961 74 15
+            %a{href: 'tel://84959617415', style: 'decoration: none:'} 
+              8 (495) 961 74 15
             .small Работаем круглосуточно
