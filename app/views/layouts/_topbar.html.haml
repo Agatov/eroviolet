@@ -21,5 +21,10 @@
 
       %li.right
         .phone
-          8 (495) 961 74 15
-          .small Работаем круглосуточно
+          - if params[:utm_source] == 'yandex' or session[:utm_source] == 'yandex'
+            8 (967) 078-73-35
+            .small Работаем круглосуточно
+
+          - else
+            8 (495) 961 74 15
+            .small Работаем круглосуточно
