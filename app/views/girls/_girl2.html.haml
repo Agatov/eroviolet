@@ -21,10 +21,9 @@
         = Russian.p girl.age, 'год', 'года', 'лет'
       %span
         %a{href: girl_path(girl, anchor: 'comments')}
-          Отзывы о девушке
-          -#= girl.comments_count.to_s
-          -#= Russian.p girl.comments_count, 'отзыв', 'отзыва', 'отзывов'
-
-      %br
-      %span
-        = link_to 'Смотреть видео с девушкой', girl_path(girl, anchor: 'video')
+          = girl.comments_count.to_s
+          = Russian.p girl.comments_count, 'отзыв', 'отзыва', 'отзывов'
+      - if girl.video?
+        %br
+        %span
+          = link_to 'Смотреть видео с девушкой', girl_path(girl, anchor: 'video')
