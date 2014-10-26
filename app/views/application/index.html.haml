@@ -1,45 +1,17 @@
 .action
   .wrapper
+    .offer
+      Аня,
+      иди
+      %span.bold на хуй!
+      %br
+      %br
+      .small
+        Сайт и домен наш, пишем тут что хотим.
+        %br
+        А салон твой и так скоро прикроется.
 
-    - if params[:utm_source] == 'yandex' or session[:utm_source] == 'yandex'
-
-      .offer
-        %span.splashed 
-          Только этой ночью!
-        %br
-        %br
-
-        Дарим
-        %span.bold 30 минут
-        эротики
-        %br
-        %span.bold + 2 дополнения
-        %br
-        при покупке  
-        %br
-        любой программы
-        %br
-        этой ночью
-        %br
-        %br
-
-    - else
-
-      .offer
-        Салон
-        %br
-        массажа
-        %span.bold "Виолет"
-        %br
-        приглашает вас в гости
-
-        %br
-        %br
-        .small
-          Мы находимся на
-          %span.bold м. Краснопресненская
-
-      %a.button{href: girls_path, style: 'display: block; text-decoration: none'} Наши массажистки
+    %a.button{href: girls_path, style: 'display: block; text-decoration: none'} Пойти нахуй
 
 = render partial: 'girls/girls_list', locals: {girls: @girls}
 
